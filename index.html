@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int(123): Arithmancer's Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="files/style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 flex items-center justify-center min-h-screen">
+    <div id="game-container" class="w-full max-w-4xl">
+        <div id="start-screen" class="text-center">
+            <h1 class="text-4xl font-bold mb-6">Int(123): Arithmancer's Challenge</h1>
+            <button id="start-game" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Start Game
+            </button>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <div id="player-info" class="flex justify-between mb-4">
+                <div>HP: <span id="player-hp">3</span>/3</div>
+                <div>Mana: <span id="player-mana">10</span>/10</div>
+                <div>Power: <span id="player-power">1</span></div>
+            </div>
+
+            <div id="current-attack" class="text-4xl font-bold text-center mb-4">
+                Attack: <span id="attack-value">0</span>
+            </div>
+
+            <div id="enemy-area" class="flex justify-center space-x-4 mb-4">
+                <!-- Enemy cards will be dynamically added here -->
+            </div>
+
+            <div id="player-actions" class="flex justify-center space-x-4">
+                <button id="action-plus-one" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    +1
+                </button>
+                <button id="action-times-two" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                    *2
+                </button>
+                <button id="action-divide-three" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    /3
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="files/enemies.js"></script>
+    <script src="files/game.js"></script>
+</body>
+</html>
