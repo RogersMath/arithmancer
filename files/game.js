@@ -1,7 +1,3 @@
-// Import enemy types and abilities
-import { enemyTypes, generateEnemy } from './enemies.js';
-import playerUpgrades from './playerUpgrades.json';
-
 // Game state
 let gameState = {
     playerHP: 3,
@@ -70,7 +66,7 @@ function resetGameState() {
 
 function updateDisplay() {
     playerHPDisplay.textContent = gameState.playerHP;
-    playerManaDisplay.textContent = gameState.playerMana;
+    playerManaDisplay.textContent = gameState.playerMana.toFixed(1);
     playerPowerDisplay.textContent = gameState.playerPower;
     attackValueDisplay.textContent = gameState.currentAttack;
 }
@@ -172,5 +168,3 @@ function gameLoop() {
 
 // Initialize the game
 updateDisplay();
-
-export { gameState, updateDisplay };
